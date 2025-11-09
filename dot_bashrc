@@ -137,4 +137,5 @@ function y() {
   rm -f -- "$tmp"
 }
 
+eval "$(starship init bash)"
 eval "$(zoxide init bash)"

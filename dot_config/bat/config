@@ -1,0 +1,163 @@
+# This is `bat`s configuration file. Each line either contains a comment or
+# a command-line option that you want to pass to `bat` by default. You can
+# run `bat --help` to get a list of all possible configuration options.
+
+# Specify desired highlighting theme (e.g. "TwoDark"). Run `bat --list-themes`
+# for a list of all available themes
+--theme="Catppuccin Mocha"
+
+# Enable this to use italic text on the terminal. This is not supported on all
+# terminal emulators (like tmux, by default):
+#--italic-text=always
+
+# Uncomment the following line to disable automatic paging:
+#--paging=never
+
+# Uncomment the following line if you are using less version >= 551 and want to
+# enable mouse scrolling support in `bat` when running inside tmux. This might
+# disable text selection, unless you press shift.
+#--pager="less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
+
+########################################
+# File Type Detection & Syntax Mapping
+########################################
+# Syntax mappings: map a certain filename pattern to a language.
+#   Example 1: use the C++ syntax for Arduino .ino files
+#   Example 2: Use ".gitignore"-style highlighting for ".ignore" files
+--map-syntax "*.ino:C++"
+--map-syntax="*.pde:C++"
+--map-syntax ".ignore:Git Ignore"
+
+# # Configuration files
+# --map-syntax="*.conf:INI"
+# --map-syntax="*.cfg:INI"
+# --map-syntax="*.cnf:INI"
+# --map-syntax=".env:INI"
+# --map-syntax="*.properties:INI"
+# --map-syntax="*.toml:TOML"
+# --map-syntax="*.tml:TOML"
+#
+# # Version control and ignore files
+# --map-syntax=".ignore:Git Ignore"
+# --map-syntax=".gitignore:Git Ignore"
+# --map-syntax=".dockerignore:Git Ignore"
+# --map-syntax=".eslintignore:Git Ignore"
+# --map-syntax=".prettierignore:Git Ignore"
+#
+# # Docker and containerization
+# --map-syntax="Dockerfile*:Dockerfile"
+# --map-syntax="Containerfile*:Dockerfile"
+# --map-syntax="*.dockerfile:Dockerfile"
+# --map-syntax="docker-compose*.yml:YAML"
+
+# # Web development
+--map-syntax="*.js:JavaScript"
+--map-syntax="*.jsx:JavaScript React"
+--map-syntax="*.ts:TypeScript"
+--map-syntax="*.tsx:TypeScript React"
+--map-syntax="*.vue:Vue Component"
+--map-syntax="*.svelte:Svelte"
+--map-syntax="*.json:JSON"
+--map-syntax="*.jsonc:JSON with Comments"
+--map-syntax="*.json5:JSON5"
+
+# # HTML and CSS
+--map-syntax="*.html:HTML"
+--map-syntax="*.htm:HTML"
+--map-syntax="*.css:CSS"
+--map-syntax="*.scss:SCSS"
+--map-syntax="*.sass:SASS"
+--map-syntax="*.less:Less"
+
+# # Markdown and documentation
+--map-syntax="*.md:Markdown"
+--map-syntax="*.markdown:Markdown"
+--map-syntax="*.mdx:Markdown"
+--map-syntax="*.rst:reStructuredText"
+
+# # YAML files
+--map-syntax="*.yml:YAML"
+--map-syntax="*.yaml:YAML"
+--map-syntax=".clang-format:YAML"
+--map-syntax=".clang-tidy:YAML"
+
+# # XML and related
+--map-syntax="*.xml:XML"
+--map-syntax="*.xsd:XML"
+--map-syntax="*.xslt:XSLT"
+--map-syntax="*.svg:XML"
+
+# # Scripting languages
+--map-syntax="*.py:Python"
+--map-syntax="*.rb:Ruby"
+--map-syntax="*.pl:Perl"
+--map-syntax="*.php:PHP"
+--map-syntax="*.lua:Lua"
+--map-syntax="*.r:R"
+
+# # Shell and terminal
+--map-syntax="*.sh:Bash"
+--map-syntax="*.bash:Bash"
+--map-syntax="*.zsh:Bash"
+--map-syntax="*.fish:Fish"
+--map-syntax="*.ps1:PowerShell"
+
+# # System and networking
+--map-syntax="hosts:INI"
+--map-syntax="fstab:INI"
+--map-syntax="resolve.conf:INI"
+
+# Build systems and package managers
+--map-syntax="Makefile*:Makefile"
+--map-syntax="*.mk:Makefile"
+--map-syntax="Cargo.toml:TOML"
+--map-syntax="poetry.lock:TOML"
+--map-syntax="pyproject.toml:TOML"
+--map-syntax="package.json:JSON"
+--map-syntax="composer.json:JSON"
+--map-syntax="go.mod:Go Module"
+--map-syntax="go.sum:Go Checksum"
+
+# # Database and SQL
+--map-syntax="*.sql:SQL"
+--map-syntax="*.ddl:SQL"
+
+# Documentation and licenses
+--map-syntax="LICENSE:Plain Text"
+--map-syntax="COPYING:Plain Text"
+--map-syntax="README:Markdown"
+--map-syntax="CHANGELOG:Markdown"
+--map-syntax="TODO:Markdown"
+
+# # Log files (treat as plain text for cleaner viewing)
+--map-syntax="*.log:Plain Text"
+--map-syntax="*.txt:Plain Text"
+
+# Development tools
+--map-syntax=".eslintrc:JSON"
+--map-syntax=".prettierrc:JSON"
+--map-syntax=".babelrc:JSON"
+--map-syntax=".stylelintrc:JSON"
+--map-syntax=".tern-config:JSON"
+--map-syntax="tsconfig.json:JSON"
+--map-syntax="jsconfig.json:JSON"
+
+# # Git related
+--map-syntax=".gitattributes:Git Attributes"
+--map-syntax=".gitmodules:Git Config"
+--map-syntax=".gitconfig:Git Config"
+
+# # Editor and IDE configs
+--map-syntax=".editorconfig:EditorConfig"
+--map-syntax="vscode/settings.json:JSON"
+--map-syntax=".vimrc:Vim Script"
+--map-syntax=".ideavimrc:Vim Script"
+########################################
+# Optional Debugging
+########################################
+
+# bat --diagnostic
+# bat --list-themes
+# bat --list-languages
+# bat --config-file
+# bat --generate-config-file

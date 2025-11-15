@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+
+  // ==========================================================
+  // ⚙️ Runtime Configuration
+  // ==========================================================
+  "runtime": {
+    "version": "LuaJIT",
+    "pathStrict": true
+  },
+
+  // ==========================================================
+  // 🧠 Workspace Configuration
+  // ==========================================================
+  "workspace": {
+    "library": [
+      "$VIMRUNTIME/lua",
+      "$VIMRUNTIME/lua/vim/lsp",
+      "$PWD/lua",
+      "${3rd}/luv/library",
+      "$DEPS_PATH/luvit-meta/library"{{DEPS}}
+    ],
+    "ignoreDir": ["/lua"],
+    "checkThirdParty": false
+  }
+}

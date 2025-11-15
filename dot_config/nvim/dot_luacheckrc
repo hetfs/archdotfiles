@@ -1,0 +1,36 @@
+-- ==========================================================
+-- 🧪 Luacheck Configuration
+-- Static analysis and linting for Lua/Neovim projects
+-- https://luacheck.readthedocs.io/en/stable/
+-- ==========================================================
+
+-- ----------------------------------------------------------
+-- ⚙️ Caching
+-- ----------------------------------------------------------
+-- Re-run checks only when file modification times change.
+cache = true
+
+-- ----------------------------------------------------------
+-- 🚫 Ignored Warnings
+-- ----------------------------------------------------------
+-- Full warning reference:
+-- https://luacheck.readthedocs.io/en/stable/warnings.html
+ignore = {
+	"211", -- Unused variable
+	"212", -- Unused argument: clearer to keep `_arg_name` in callbacks
+	"411", -- Redefining a local variable
+	"412", -- Redefining a function argument
+	"422", -- Shadowing an argument
+	"431", -- Shadowing a variable
+	"122", -- Indirectly setting a read-only global
+	"631", -- Line is too long
+}
+
+-- ----------------------------------------------------------
+-- 🌍 Global Variables
+-- ----------------------------------------------------------
+-- Global symbols defined in C or external runtime environments
+read_globals = {
+	"vim", -- Neovim global API
+	"Snacks", -- Custom global module (example)
+}

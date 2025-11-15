@@ -1,0 +1,68 @@
+# ==========================================================
+# 🐍 Ruff Configuration
+# Enforces consistent Python linting, import sorting, and formatting
+# https://docs.astral.sh/ruff
+# ==========================================================
+
+# ----------------------------------------------------------
+# ✂️ Line Length (aligned with Black)
+# ----------------------------------------------------------
+line-length = 180
+
+# ----------------------------------------------------------
+# 🚫 Excluded Paths
+# ----------------------------------------------------------
+exclude = [
+  ".git",
+  ".ruff_cache",
+  ".venv",
+  "venv",
+  "__pycache__",
+  "build",
+  "dist",
+]
+
+# ----------------------------------------------------------
+# 🧩 Target Python Version
+# ----------------------------------------------------------
+target-version = "py314"
+
+# ----------------------------------------------------------
+# 🧹 Linting Rules
+# ----------------------------------------------------------
+[lint]
+# Enable all rule sets
+select = ["ALL"]
+
+# Ignore selected rules
+ignore = [
+  "A005",     # Shadowing built-in names
+  "BLE001",   # Broad exception catch
+  "D100",     # Missing docstring in public module
+  "D101",     # Missing docstring in public class
+  "D104",     # Missing docstring in public package
+  "D203",     # One blank line required before class docstring
+  "D212",     # Multi-line docstring summary should start at the first line
+  "S603",     # subprocess call with shell=True
+  "TRY300",   # Use of overly broad try/except blocks
+  "TRY400",   # Raise with inner exception context
+  "PGH003",   # Use specific exception class for pytest.raises
+  "PLR0911",  # Too many return statements
+]
+
+# Allow automatic fixes for all fixable issues
+fixable = ["ALL"]
+
+# ----------------------------------------------------------
+# 🎨 Formatting Preferences
+# ----------------------------------------------------------
+[format]
+quote-style = "double"
+indent-style = "space"
+
+# ----------------------------------------------------------
+# 📦 Import Sorting (isort-compatible with Black)
+# ----------------------------------------------------------
+[lint.isort]
+combine-as-imports = true
+known-first-party = ["avante"]

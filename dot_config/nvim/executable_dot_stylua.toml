@@ -1,16 +1,31 @@
+# ==========================================================
+# 🎨 StyLua Configuration
+# Format Lua code consistently and beautifully
+# https://github.com/JohnnyMorganz/StyLua
+# ==========================================================
 
-#  ~/.config/nvim/.stylua.toml StyLua Configuration
-# Reference:
-# - https://github.com/JohnnyMorganz/StyLua
-# - https://github.com/gen740/SmoothCursor.nvim/blob/main/.stylua.toml
+# ----------------------------------------------------------
+# 🧩 Core Settings
+# ----------------------------------------------------------
+syntax = "Lua54"
+column_width = 119
+line_endings = "Unix"
 
-# Formatting behavior
-column_width       = 100
-line_endings       = "Unix"
-indent_type        = "Spaces"
-indent_width       = 2
-quote_style        = "AutoPreferDouble"  # Options: AutoPreferDouble | AutoPreferSingle
-call_parentheses   = "Always"            # Options: Always | NoSingleTable
-no_call_parentheses = false              # Always use parentheses for function calls
-syntax             = "Lua54"             # Use Lua 5.4 parser
+# ----------------------------------------------------------
+# 🔧 Indentation Rules
+# ----------------------------------------------------------
+indent_type = "Tabs"
+indent_width = 2
 
+# ----------------------------------------------------------
+# ✍️ Quotation and Statement Style
+# ----------------------------------------------------------
+quote_style = "AutoPreferDouble"
+collapse_simple_statement = "Always"
+call_parentheses = "Always"
+
+# ----------------------------------------------------------
+# 📦 Require Sorting
+# ----------------------------------------------------------
+[sort_requires]
+enabled = true

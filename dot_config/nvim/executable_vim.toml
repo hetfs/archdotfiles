@@ -1,21 +1,34 @@
+# ==========================================================
+# 🧠 Selene Configuration
+# Static analysis settings for Lua and Neovim development
+# https://kampfkarren.github.io/selene/
+# ==========================================================
+
+# ----------------------------------------------------------
+# ⚙️ Core Settings
+# ----------------------------------------------------------
 [selene]
 base = "lua51"
 name = "vim"
 
+# ----------------------------------------------------------
+# 🧩 Global Environment Definitions
+# ----------------------------------------------------------
+
+# Neovim global variable
 [vim]
 any = true
 
+# LuaJIT compatibility globals
 [jit]
 any = true
 
+# Test framework globals (Busted / Plenary)
 [assert]
 any = true
-
 [describe]
 any = true
-
 [it]
 any = true
-
 [before_each.args]
 any = true

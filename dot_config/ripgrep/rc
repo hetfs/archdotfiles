@@ -1,0 +1,28 @@
+# ~/.config/ripgrep/rc
+
+# Search behavior
+--smart-case           # Case insensitive unless pattern has uppercase
+--hidden              # Search hidden files and folders
+--follow              # Follow symbolic links
+
+# File filtering
+--glob=!.git/
+--glob=!node_modules/
+--glob=!.svn/
+--glob=!.hg/
+
+# Output formatting
+--max-columns=150
+--max-columns-preview
+--line-number
+
+# Custom file types
+--type-add=web:*.{html,css,js,ts,jsx,tsx,vue,svelte}
+--type-add=config:*.{json,yaml,yml,toml,xml,ini}
+--type-add=docs:*.{md,markdown,txt,rst}
+
+# Color settings
+--colors=line:fg:yellow
+--colors=path:fg:blue
+--colors=match:fg:red
+--colors=match:style:bold

@@ -1,0 +1,30 @@
+# ===========================================================
+# 🌈 Catppuccin-Aware eza Colors
+# Base fallback palette for Mocha/Latte themes
+# ===========================================================
+
+[colors]
+# === Shared UI elements ===
+user = "cyan"
+group = "blue"
+date = "yellow"
+inode = "dim gray"
+size = "magenta"
+links = "purple"
+perm = "green"
+
+# === File types ===
+dir = "bold bright-blue"
+exec = "bold bright-green"
+socket = "bold bright-magenta"
+block = "bold bright-yellow"
+char = "bold bright-cyan"
+orphan = "bold red"
+missing = "bold bright-red"
+
+# === Hidden and symlink styling ===
+hidden = "dim"
+symlink = "italic bright-cyan"
+
+# === Default fallback ===
+normal = "white"
